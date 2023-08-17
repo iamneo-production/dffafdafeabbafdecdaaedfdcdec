@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "react-scripts test",
+    "test": "jest --env=jsdom",
     "start": "node server.js"
   },
   "keywords": [],
