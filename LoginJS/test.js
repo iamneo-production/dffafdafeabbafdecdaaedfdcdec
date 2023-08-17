@@ -33,7 +33,7 @@ describe('Registration Form Validation', () => {
       </div>`;
   });
 
-  test('Valid Registration', () => {
+  test('Week4_DAy1_Valid Registration', () => {
     // Mock form inputs
     document.getElementById('username').value = 'validUser';
     document.getElementById('password').value = 'Password1';
@@ -72,7 +72,7 @@ describe('Registration Form Validation', () => {
     expect(window.location.href).toEqual('login.html');
   });
 
-  test('Invalid Registration - Weak Password', () => {
+  test('Week4_DAy1_Invalid Registration Weak Password', () => {
     // Mock form inputs with weak password
     document.getElementById('username').value = 'weakUser';
     document.getElementById('password').value = 'password'; // Doesn't meet complexity requirements
@@ -87,7 +87,7 @@ describe('Registration Form Validation', () => {
     expect(document.getElementById('passwordValidation').textContent).toBe('Password must be at least 8 characters long and contain both letters and numbers');
 });
 
-test('Invalid Registration - Password does not match', () => {
+test('Week4_DAy1_Invalid Registration Password does not match', () => {
   // Mock form inputs with weak password
   document.getElementById('username').value = 'weakUser';
   document.getElementById('password').value = 'password1'; // Doesn't meet complexity requirements
@@ -102,7 +102,7 @@ test('Invalid Registration - Password does not match', () => {
   expect(document.getElementById('passwordValidation').textContent).toBe('Passwords do not match');
 });
 
-test('Invalid Registration - Invalid Role', () => {
+test('Week4_DAy1_Invalid Registration Invalid Role', () => {
   // Mock form inputs with invalid role
   document.getElementById('username').value = 'invalidRoleUser';
   document.getElementById('password').value = 'Password123';
@@ -120,7 +120,7 @@ test('Invalid Registration - Invalid Role', () => {
   expect(window.alert).toHaveBeenCalledWith('Invalid role selected.');
 });
 
-  test('Valid Registration navigate to login page', () => {
+  test('Week4_DAy2_Valid Registration navigate to login page', () => {
     // Mock form inputs
     document.getElementById('username').value = 'validUser';
     document.getElementById('password').value = 'Password1';
@@ -173,7 +173,7 @@ describe('Login Form Validation', () => {
     `;
   });
 
-  test('Valid Login', () => {
+  test('Week4_DAy1_Valid Login', () => {
     // Mock form inputs
     document.getElementById('username').value = 'validUser';
     document.getElementById('password').value = 'Password1';
@@ -200,7 +200,7 @@ describe('Login Form Validation', () => {
     expect(window.alert).toHaveBeenCalledWith('Login successful! Role: admin');
   });
 
-  test('Invalid Login', () => {
+  test('Week4_DAy1_Invalid Login', () => {
     // Mock form inputs with incorrect credentials
     document.getElementById('username').value = 'invalidUser';
     document.getElementById('password').value = 'WrongPassword';
@@ -223,7 +223,7 @@ describe('Login Form Validation', () => {
     expect(window.location.href).toBe('');
   });
 
-  test('Valid Login navigate to home page', () => {
+  test('Week4_DAy2_Valid Login navigate to home page', () => {
     // Mock form inputs
     document.getElementById('username').value = 'validUser';
     document.getElementById('password').value = 'Password1';
